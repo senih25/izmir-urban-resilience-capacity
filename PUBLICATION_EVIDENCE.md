@@ -33,3 +33,16 @@ Verified on 2026-09-20.
 
 ## Interpretation safeguards
 Zero source records do not establish real-world absence. Transit distance fields are straight-line settlement-core proxies rather than walking or travel-time measures. Population-normalized values are transparent arithmetic context, not quality, safety, welfare, livability or investment scores.
+
+## Distribution evidence — 2026-09-20
+- Kaggle discussion: https://www.kaggle.com/datasets/senihbayankulu/izmir-urban-resilience-capacity/discussion/742195
+- LinkedIn publication: https://www.linkedin.com/feed/update/urn:li:share:7507486502474387456/
+- X publication: https://x.com/bayankulsnh/status/2101721340076032457
+
+### Distribution acceptance
+- Kaggle discussion published and publicly rendered: PASS
+- LinkedIn post published with Kaggle dataset rich preview: PASS
+- X post published from the authenticated project account: PASS
+- Claims kept within verified dataset boundaries: PASS
+- Kaggle 10/10 referenced only as the Kaggle usability metric: PASS
+- Paid promotional actions: 0
