@@ -1,0 +1,40 @@
+name: G14 Izmir open-data publication QA
+
+on:
+  pull_request:
+    paths:
+      - ".github/workflows/g14-data-rights-ci.yml"
+      - "validate_release.py"
+      - "test/g14_provenance_contract.py"
+      - "sources.csv"
+      - "validation_report.json"
+      - "izmir_district_resilience_capacity.csv"
+      - "dataset-metadata.json"
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  provenance:
+    name: Python 3.12 / 30 districts / TUIK / IzBB attribution
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    env:
+      CI: "true"
+      PUBLIC_STABLE: "0"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Compile read-only validators
+        run: python -B -m py_compile validate_release.py test/g14_provenance_contract.py
+      - name: Validate released public-district aggregate snapshot
+        run: python -B validate_release.py
+      - name: Validate source/license provenance and freshness policy
+        run: python -B test/g14_provenance_contract.py
