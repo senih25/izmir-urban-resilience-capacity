@@ -23,6 +23,12 @@ The main contribution is not a ranking. It is an explainable capacity matrix:
 - 867,455 representative-weekday departures
 - 118 rail-stop records
 
+## Rights and data freshness
+
+This public dataset combines **separately sourced** TÜİK / TurkStat and İzmir Büyükşehir Belediyesi (İzBB) records. The TÜİK reuse notice and IzBB open-data/CC BY 4.0 attribution have **different legal conditions**; no single blanket open-source or CC BY license is inferred for the complete repository. Kaggle license metadata remains `other` pending rights-holder review. See [PROVENANCE_AND_RIGHTS.md](PROVENANCE_AND_RIGHTS.md) and [sources.csv](sources.csv).
+
+The source dates in `sources.csv` are historical retrieval evidence, **not** current service availability. The offline G-14 CI reports stale snapshots while the dataset is an evidence-oriented public release, and `PUBLIC_STABLE=1` rejects snapshots older than the 30-day provisional threshold. No district quality/safety score or official ranking is claimed.
+
 ## Start here
 Primary table: izmir_district_resilience_capacity.csv
 
