@@ -10,6 +10,8 @@ on:
       - "validation_report.json"
       - "izmir_district_resilience_capacity.csv"
       - "dataset-metadata.json"
+      - "G14_VALIDATION_AND_RIGHTS.md"
+      - "PROVENANCE_AND_RIGHTS.md"
   push:
     branches: [master]
   workflow_dispatch:
