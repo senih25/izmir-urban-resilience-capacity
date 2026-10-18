@@ -1,6 +1,6 @@
 from pathlib import Path
 import csv, json
-root=Path(r"C:\PROJELER\Izmir-Urban-Resilience-Atlas")
+root = Path(__file__).resolve().parent
 with (root/"izmir_district_resilience_capacity.csv").open(encoding="utf-8-sig",newline="") as f:
     rows=list(csv.DictReader(f))
 assert len(rows)==30
